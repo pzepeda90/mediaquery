@@ -235,7 +235,7 @@
         .filter {
             grid-area: filter;
             background-color: rgb(199, 198, 198);
-            width: 115rem;
+            width: 100rem;
             height: 6rem;
             display: flex;
             flex-direction: row;
@@ -250,13 +250,13 @@
         }
 
         .custom-select {
-            width: 100rem;
+            width: 70rem;
         }
         
         .main { 
             grid-area: main;
             overflow: scroll;
-            width: 115rem;
+            width: 100rem;
             height: 41rem;
             justify-content: center;
             align-items: center;
@@ -315,7 +315,6 @@
           
         .pagination { 
             grid-area: pagination;
-            height: rem;
             background-color:rgb(59, 151, 231) ;
             justify-content: center;
             align-content: center;
