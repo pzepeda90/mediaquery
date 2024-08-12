@@ -248,9 +248,14 @@
             padding-top: 1rem;
             padding-right: 2rem;
         }
+
+        .custom-select {
+            width: 100rem;
+        }
         
         .main { 
             grid-area: main;
+            overflow: scroll;
             width: 115rem;
             height: 41rem;
             justify-content: center;
@@ -261,21 +266,15 @@
         }
         .catalogo {
             display: flex;
-
-
-            /*
-            display: grid;
-            width: 114rem;
-            grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-            grid-template-rows: repeat(2, 1fr);
-            padding-left: 8.5rem;
-            */
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         .card {
-            width: rem;
+            width: 28rem;
+            padding-bottom: 3rem;
             margin-top: 1rem;
-            margin-bottom:26rem;
             background-color: whitesmoke;
         }
 
@@ -285,13 +284,13 @@
 
         .card-body {
             font: 0.8em sans-serif;
-            width: 10rem;
+            width: 28rem;
             background-color: WHITE;
         }
 
         .card-text {
             background-color: white;
-            width: 8rem;
+            width: 27rem;
         }
         .opciones {
             width: 64rem;
@@ -316,15 +315,11 @@
           
         .pagination { 
             grid-area: pagination;
-            height: 10rem;
+            height: rem;
             background-color:rgb(59, 151, 231) ;
             justify-content: center;
             align-content: center;
-            align-items: center;
-            justify-items: center;
-            padding-top: 2.5rem;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
+
         }
           
         .footer { 
