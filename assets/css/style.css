@@ -211,7 +211,7 @@
           .header { 
             grid-area: header;
             width: 20rem;
-            height: 47rem;
+            height: 45rem;
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -235,7 +235,7 @@
         .filter {
             grid-area: filter;
             background-color: rgb(199, 198, 198);
-            width: 80rem;
+            width: 60rem;
             height: 6rem;
             display: flex;
             flex-direction: row;
@@ -256,7 +256,7 @@
         .main { 
             grid-area: main;
             overflow: scroll;
-            width: 80rem;
+            width: 60rem;
             height: 41rem;
             justify-content: center;
             align-items: center;
