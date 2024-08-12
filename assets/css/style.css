@@ -1,0 +1,409 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.plot {  
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem repeat(7);
+    width: 36rem;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "filter"
+      "main"
+      "main"
+      "main"
+      "pagination"
+      "footer";
+}
+  
+.header { 
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    color: aliceblue;
+
+}
+
+.logo {
+    display: flex;
+}
+
+
+.titulo {
+    font-size:3rem;
+    padding-top: 0.5rem;
+}
+
+.fa-solid {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Menú Hamburguesa */
+
+.respmenu a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #456789;
+    max-width: 200px;
+    background: blue;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+  }
+
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 1rem;
+    right: 1rem;
+    top: 0;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+  }
+  
+  .respmenu input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .respmenu {
+    color: white;
+    position: relative;
+    background: blue;
+    min-height: 48px;
+  }
+  
+  .respmenu nav {
+    display: none;
+    padding-top: 0.5rem;
+    padding-right: 5rem;
+  }
+  
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+  
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+  
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+
+
+/* filtro */
+
+.filter {
+    grid-area: filter;
+    background-color: rgb(199, 198, 198);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Grilla Autos*/
+
+.main { 
+    grid-area: main;
+    background-color:aliceblue;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.opciones {
+    width: 36rem;
+    height: fit-content;
+}
+
+.card {
+    margin: 1rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-personal {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+  
+.pagination { 
+    grid-area: pagination;
+    height: 100%;
+    background-color:aliceblue ;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 0.5rem;
+}
+  
+.footer { 
+    grid-area: footer;
+    height: 8rem;
+    background-color: blue;
+    padding-top: 1.5rem;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa-brands {
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.pfooter {
+    color: aliceblue;
+    padding-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+@media (width > 768px) {
+        
+    .plot {  
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0px 0px;
+            grid-template-areas:
+              "header filter filter filter"
+              "header main main main"
+              "header main main main"
+              "header main main main"
+              "footer pagination pagination pagination";
+          }
+    
+          .header { 
+            grid-area: header;
+            width: 20rem;
+            height: 60rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            background-color: blue;
+            color: aliceblue;
+        
+        }
+        
+        .titulo {
+            font-size:2rem;
+            padding-top: 1.2rem;
+            padding-left: 1rem;
+        }
+        
+        .fa-solid {
+            padding-top: 1rem;
+            padding-right: 0.5rem;
+        }
+        
+
+        .filter {
+            grid-area: filter;
+            background-color: rgb(199, 198, 198);
+            width: 115rem;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .p-filter {
+            padding-top: 1rem;
+            padding-right: 2rem;
+        }
+        
+        .main { 
+            grid-area: main;
+            width: 115rem;
+            height: 52.5rem;
+            justify-content: center;
+            align-items: center;
+            background-color:aliceblue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .catalogo {
+            display: grid;
+            width: 114rem;
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+            grid-template-rows: repeat(2, 1fr);
+            padding-left: 8.5rem;
+        }
+
+        .card {
+            width: 13rem;
+            height: 0.8rem;
+            margin-top: 1rem;
+            margin-left: 8rem;
+            margin-bottom:26rem;
+            background-color: whitesmoke;
+        }
+
+        .card-body {
+            font: 0.8em sans-serif;
+            background-color: WHITE;
+        }
+        .card-text {
+            background-color: white;
+        }
+        .opciones {
+            width: 64rem;
+            height: fit-content;
+        }
+
+        
+        .contenedor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .btn-personal {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            
+        }
+
+          
+        .pagination { 
+            grid-area: pagination;
+            height: 10rem;
+            background-color:aliceblue ;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            padding-top: 1.7rem;
+        }
+          
+        .footer { 
+            grid-area: footer;
+            height: 10rem;
+            background-color: rgb(27, 27, 181);
+            padding-top: 1.5rem;
+        }
+        
+        .foot {
+            display: flex;
+            flex-direction: column;
+            padding-top: 1.2rem;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        .fa-brands {
+            padding-right: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .pfooter {
+            color: aliceblue;
+            padding-bottom: 1rem;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        /* CSS menu hurger*/
+
+        .respmenu a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            border-bottom: 2px solid #456789;
+            max-width: 200px;
+            background: blue;
+            font-variant: small-caps;
+            text-shadow: 1px 1px black;
+          }
+        
+          .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+            position: absolute;
+            box-sizing: border-box;
+            margin: 0;
+            padding-top: 1rem;
+            right: 1rem;
+            top: 0;
+            width: 48px;
+            height: 48px;
+          }
+          
+          .respmenu .fa-bars, .respmenu .fa-times {
+            font-size: 1px;
+            pointer-events: none;
+          }
+          
+          .respmenu input[type="checkbox"] {
+            opacity: 0;
+          }
+          
+          .respmenu {
+            color: white;
+            position: relative;
+            background: blue;
+            min-height: 48px;
+          }
+          
+          .respmenu nav {
+            display: flex;
+            padding-top: 3rem;
+          }
+          
+          .respmenu input:checked ~ nav {
+            display: block;
+          }
+          
+          .respmenu input:checked ~ .fa-bars {
+            display: none;
+          }
+          
+          .respmenu input:not(:checked) ~ .fa-times {
+            display: none;
+          }
+}
